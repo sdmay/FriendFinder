@@ -11,4 +11,3 @@ var friends = [
 ]
 
 var newMember = friends;
-
