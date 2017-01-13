@@ -14,7 +14,13 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static('app'));
 
 
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "app/public/index.html"));
+});
 
+app.get("/survey", function(req, res) {
+  res.sendFile(path.join(__dirname, "app/public/survey.html"));
+});
 
 require('./app/routing/api-route.js')(app); 
 require('./app/routing/html-routes.js')(app);
