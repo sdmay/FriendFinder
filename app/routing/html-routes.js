@@ -6,6 +6,10 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname + '/../public/survey.html'));
     });
 
+    app.get('/resume', function (req, res) {
+        res.sendFile(path.join(__dirname + '/ScottMayResume.pdf'));
+    });
+
     app.use(function (req, res) {
         res.sendFile(path.join(__dirname + '/../public/index.html'));
     });
